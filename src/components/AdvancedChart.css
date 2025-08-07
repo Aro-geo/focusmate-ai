@@ -1,0 +1,15 @@
+.chart-container-sm {
+  height: 200px;
+}
+
+.chart-container-md {
+  height: 300px;
+}
+
+.chart-container-lg {
+  height: 400px;
+}
+
+.chart-container-xl {
+  height: 500px;
+}

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom utility classes for replacing inline styles */
+.floating-assistant-size {
+  width: 60px;
+  height: 60px;
+}
+
+.floating-assistant-expanded {
+  width: 320px;
+  height: 280px;
+}
+
+.floating-assistant-expanded-chat {
+  width: 320px;
+  height: 400px;
+}
+
+.debug-indicator-red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(255, 0, 0, 0.1);
+  color: #900;
+  font-size: 10px;
+  padding: 2px;
+}
+
+.debug-indicator-green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(0, 255, 0, 0.1);
+  color: #090;
+  font-size: 10px;
+  padding: 2px;
+}
+
+.animate-bounce-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.animate-bounce-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.z-highest {
+  z-index: 9999;
+}
