@@ -19,26 +19,15 @@ A clean, modern productivity dashboard built for young professionals featuring A
 
 
 ### 🚀 Database Setup Steps
-1. **Create Supabase Project**: 
-   - Go to [supabase.com](https://supabase.com) and create a new project
-   - Wait for the project to be fully set up
-
-2. **Environment Setup**: 
-   - Copy `.env.example` to `.env`
-   - Add your Supabase URL and anon key from your project settings
-
-3. **Run Database Migration**: 
-   - Go to your Supabase dashboard → SQL Editor
-   - Copy and paste the contents of `supabase/migrations/001_initial_schema.sql`
-   - Run the migration to create all tables and policies
-
-4. **Optional - Add Seed Data**: 
-   - Use `supabase/seed.sql` for sample data (update UUIDs with real user IDs)
-
-5. **Test the Connection**: 
-   - Start your app with `npm start`
-   - Create a user account to test authentication
-   - Try adding tasks and using the Pomodoro timer
+1. **Environment Setup**: Copy `.env.example` to `.env` with the provided credentials
+2. **Run Migrations**: Set up the database schema
+```bash
+npm run migrate
+```
+3. **Seed Data** (Optional): Add sample data for testing
+```bash
+npm run db:seed
+```
 
 ### 🌩️ Neon Serverless Database Integration
 

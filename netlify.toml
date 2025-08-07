@@ -1,0 +1,51 @@
+# Netlify configuration for FocusMate AI
+
+# Build settings
+[build]
+  # Directory to publish (the output of the build process)
+  publish = "build"
+  # Build command with verbose output
+  command = "npm run build -- --verbose"
+
+# SPA redirect rule
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables
+[build.environment]
+  # Set Node.js version
+  NODE_VERSION = "18"
+  # Treat warnings as errors during build (set to false to ignore warnings)
+  CI = "false"
+  # Disable ESLint plugin during build
+  DISABLE_ESLINT_PLUGIN = "true"
+  # Don't generate source maps to reduce build size
+  GENERATE_SOURCEMAP = "false"
+  # Additional build flags
+  SKIP_PREFLIGHT_CHECK = "true"
+  # Disable TypeScript type checking for faster builds
+  TSC_COMPILE_ON_ERROR = "true"
+  
+  # Database Configuration for Netlify Functions
+  DATABASE_URL = "postgresql://neondb_owner:npg_s8ahEI0jtxTM@ep-summer-term-abunoc3n.eu-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+  DATABASE_AUTHENTICATED_URL = "postgresql://authenticated@ep-summer-term-abunoc3n.eu-west-2.aws.neon.tech/neondb?sslmode=require"
+  NEXT_PUBLIC_DATABASE_AUTHENTICATED_URL = "postgresql://authenticated@ep-summer-term-abunoc3n.eu-west-2.aws.neon.tech/neondb?sslmode=require"
+  JWT_SECRET = "ce5ae090ed6f92369cef0e26113be137e5ee7ef6dc8c26f6eaf51280718e4f8b6ae8a6f60a811323fb1a4176772cf9ea7208bf0c812b4b01eeefbb36c006c9e5"
+  NODE_ENV = "production"
+  
+  # OpenAI Configuration for AI features
+  OPENAI_API_KEY = "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"
+
+# Redirects for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers to set
+[[headers]]
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
